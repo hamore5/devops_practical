@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+  
+  tasks: 
+    - name: uptime module
+      action: uptime
+      register: up_out
+
+    - debug: 
+        var=up_out

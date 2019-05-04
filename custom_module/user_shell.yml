@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+
+  tasks:
+    - name: find root user
+      action: root_shell username=root
+      register: root_out
+
+    - debug:
+        var: root_out

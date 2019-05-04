@@ -1,0 +1,13 @@
+---
+
+- hosts: localhost
+
+  vars:
+    array_of_numbers:
+      - 11
+      - 12
+      - 13
+
+  tasks:
+    - name: Print minimum of array
+      debug: msg="localhost={{ array_of_numbers | min }}"
